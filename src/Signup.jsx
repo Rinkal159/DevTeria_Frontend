@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './globalColors.css';
 import "./index.css";
 import axios from "axios";
 import { addUser } from "./features/user/userSlice";
@@ -8,12 +9,10 @@ import Select from "react-select";
 import CreatableSelect from "react-select/creatable";
 import Error from "./Error";
 import { useAuth0 } from "@auth0/auth0-react";
-import ToggleButton from "./ToggleButton";
-import { Placeholder, SingleValue } from "react-select/animated";
 import Loading from "./Loading";
 
 export default function Signup() {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const { user, getAccessTokenSilently } = useAuth0();
 
   const [imgPreview, setImgPreview] = useState("");
   const [img, setImg] = useState("");
@@ -83,15 +82,11 @@ export default function Signup() {
     }),
     singleValue: (base) => ({
       ...base,
-      color: document.documentElement.classList.contains("dark")
-        ? "white"
-        : "black",
+      color: "black"
     }),
     input: (base) => ({
       ...base,
-      color: document.documentElement.classList.contains("dark")
-        ? "white"
-        : "black",
+      color: "black"
     }),
     clearIndicator: (base) => ({
       ...base,
@@ -287,7 +282,7 @@ export default function Signup() {
             }}
           >
             {/* image */}
-            <div className="group margin ">
+            <div className="groupSignup margin ">
               <img
                 src={img ? imgPreview : "../public/user2.jpg"}
                 alt="Profile picture"
@@ -304,7 +299,7 @@ export default function Signup() {
             </div>
 
             {/* firstname and lastname */}
-            <div className="group">
+            <div className="groupSignup">
               <input
                 className="hoverInput"
                 type="text"
@@ -326,7 +321,7 @@ export default function Signup() {
             </div>
 
             {/* age and occuation */}
-            <div className="group">
+            <div className="groupSignup">
               <input
                 className="hoverInput"
                 type="number"
@@ -350,7 +345,7 @@ export default function Signup() {
 
             {/* gender */}
             <div className="flex gap-x-8 justify-center">
-              <div className="group cursor-pointer">
+              <div className="groupSignup cursor-pointer">
                 <input
                   className="cursor-pointer"
                   type="radio"
@@ -364,7 +359,7 @@ export default function Signup() {
                 </label>
               </div>
 
-              <div className="group">
+              <div className="groupSignup">
                 <input
                   className="cursor-pointer"
                   type="radio"
@@ -378,7 +373,7 @@ export default function Signup() {
                 </label>
               </div>
 
-              <div className="group">
+              <div className="groupSignup">
                 <input
                   className="cursor-pointer"
                   type="radio"
