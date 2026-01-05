@@ -14,11 +14,7 @@ import getMyReceivedReq from "./API_Calling/getMyReceivedReq";
 import getMyConnections from "./API_Calling/getMyConnections";
 
 export default function Feed() {
-
   const {user, getAccessTokenSilently, isAuthenticated} = useAuth0();
-
-  
-  
   const feedUsers = useSelector((state) => state.feed);
 
   const [load, setLoad] = useState(true);
@@ -29,29 +25,32 @@ export default function Feed() {
   // send request when hitting interested or ignore button
   async function sendReq(status) {
     const token = await getAccessTokenSilently();
-    
-    await sendInterestedOrIgnoreReq(token, status, feedUsers[0]._id, dispatch, setErr);
+
+    await sendInterestedOrIgnoreReq(
+      token,
+      status,
+      feedUsers[0]._id,
+      dispatch,
+      setErr
+    );
   }
 
   // get the feed
   async function getFeed() {
-    
     const token = await getAccessTokenSilently();
     await getMyFeed(token, dispatch, setLoad, setErr);
-
   }
 
   // get all the sent requests
   async function getSentReq() {
     const token = await getAccessTokenSilently();
     await getMySentReq(token, dispatch, setErr);
-
   }
 
   //get all the received reqeuests
   async function getReceivedReq() {
     const token = await getAccessTokenSilently();
-    await getMyReceivedReq(token,dispatch, setErr);
+    await getMyReceivedReq(token, dispatch, setErr);
   }
 
   async function getConnections() {
@@ -76,12 +75,11 @@ export default function Feed() {
 
   return (
     <div className=" feed-bg ">
-  
       <Requests />
       <ShowFeed
-      actualFeedStyle='actual-feed'
+        actualFeedStyle="actual-feed"
         feedUsers={feedUsers}
-        userCardBgStyle='user-card-bg'
+        userCardBgStyle="user-card-bg"
         sendIgnoreReq={sendReq}
         sendInterestedReq={sendReq}
         load={load}
