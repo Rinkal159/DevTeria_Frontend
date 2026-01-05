@@ -16,7 +16,7 @@ export default function Index() {
   return (
     <div>
       <h1 className="devTinder-heading">
-        <i className="fa-solid fa-code"></i>&nbsp;DevTinder
+        <i className="fa-solid fa-code"></i>&nbsp;DevSphere
       </h1>
 
       <div className="index">
