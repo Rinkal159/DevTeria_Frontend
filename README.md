@@ -1,12 +1,22 @@
-# React + Vite
+# 🚀 DevTeria – Developer Networking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevTeria is a modern developer-centric networking platform designed to help developers connect, collaborate, and grow together. It provides a community-driven space where developers can showcase skills, share ideas, and build meaningful professional connections.
 
-Currently, two official plugins are available:
+## 🌐 About DevTeria
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DevTeria bridges the gap between learning and real-world development by simulating a professional networking environment for developers. It focuses on clean UI, smooth user experience, and scalable application logic, making it an ideal project for demonstrating full-stack development skills.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 👤 Developer profiles  
+- 🤝 Connect with other developers  
+- 💬 Community-focused interaction  
+- 🎨 Clean and responsive UI  
+- ⚡ Smooth navigation and user experience  
+- 🧩 Modular and scalable code structure  
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, JavaScript, HTML, CSS  
+- **Styling:** CSS / Tailwind  
+- **Tools:** Git, GitHub, VS Code
